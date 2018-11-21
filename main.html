@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bbacktv</title>
+<Style>
+#bar{
+  height: 40px;
+  width: 400px;
+  border: 1px solid #1b5ac2;
+  background: #ffffff;
+  position:absolute;
+
+}
+input{
+  font-size: 16px;
+  width:325px;
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  float: left;
+}
+body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .jbTitle {
+        text-align: center;
+      }
+      .jbMenu {
+        text-align: center;
+        background-color: darkgrey;
+        width: 100%;
+      }
+      .jbContent {
+        height: 2000px;
+      }
+      .jbFixed {
+        position: fixed;
+        top: 0px;
+      }
+     </Style>
+     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+          $( document ).ready( function() {
+            var jbOffset = $( '.jbMenu' ).offset();
+            $( window ).scroll( function() {
+              if ( $( document ).scrollTop() > jbOffset.top ) {
+                $( '.jbMenu' ).addClass( 'jbFixed' );
+              }
+              else {
+                $( '.jbMenu' ).removeClass( 'jbFixed' );
+              }
+            });
+          } );
+        </script>
+  </head>
+
+  <body>
+      <div>
+           <img src="img/logo.png" alt="why imgs"width="100%"style="width:190px;"/>
+      </div>
+      <div class="jbMenu">
+        <p>
+        ▼YOUTUBE 동영상 설명▼
+          </p>
+            </div>
+
+    <p align="middle">
+    <iframe width="340" height="180"  frameborder="5" src="https://www.youtube.com/embed/KS1LVfNBJfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+  <div class="jbMenu">
+    <p>
+      ▲YOUTUBE 동영상 설명▲
+    </p>
+</div>
+    <div align="center">
+      <img src="img/google.png" alt="why imgs"width="100%"style="width:240px;height:80px;padding-top:60px;padding-bottom:60px;" border="1";/>
+      <img src="img/naver.png" alt="why imgs"width="100%"style="width:240px;height:80px;padding-top:60px;padding-bottom:60px;" border="1";/>
+    </div>
+  </div>
+  <div id="bar">
+  <input type="text" placeholder="검색어 입력해주세요"  />
+</div>
+  </body>
+</html>
